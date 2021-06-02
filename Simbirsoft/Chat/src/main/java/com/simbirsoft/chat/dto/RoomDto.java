@@ -1,6 +1,5 @@
 package com.simbirsoft.chat.dto;
 
-import com.simbirsoft.chat.model.Message;
 import com.simbirsoft.chat.model.Room;
 import com.simbirsoft.chat.model.User;
 import lombok.AllArgsConstructor;
@@ -17,7 +16,7 @@ import java.util.stream.Collectors;
 @Builder
 public class RoomDto {
     private Long id;
-    private List<User> userId;
+    private List<User> useruserList;
 
     public static RoomDto from(Room room){
         if(room==null){
@@ -25,7 +24,7 @@ public class RoomDto {
         }
         return RoomDto.builder()
                 .id(room.getId())
-                .userId(room.getUser())
+                .useruserList(room.getUser())
                 .build();
     }
     public static List<RoomDto> from(List<Room> room) {
